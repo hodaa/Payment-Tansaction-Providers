@@ -51,3 +51,8 @@ Get Book by Currency
 ## Postman collection
    https://www.getpostman.com/collections/19b2f872b7fa75c27c91
 
+## To Run Test
+ ```
+go test .
+```
+

@@ -27,3 +27,8 @@ EXPOSE 8080
 # Command to run the executable
 CMD ["./main"]
 
+# Run test
+RUN set -ex; \
+    apk update; \
+    apk add --no-cache git
+

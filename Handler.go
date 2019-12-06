@@ -74,6 +74,14 @@ func get(w http.ResponseWriter, r *http.Request) {
 		transactions = searchByCurrency(val[0], transactions)
 	}
 
+	if minVal, ok := queries["amountMin"]; ok {
+		if maxVal, ok := queries["amountMin"]; ok {
+			fmt.Println(queries["amountMin"])
+			transactions = searchByAmount(minVal[0], maxVal[0], transactions)
+		}
+
+	}
+
 	json.NewEncoder(w).Encode(transactions)
 	w.WriteHeader(http.StatusOK)
 }
@@ -130,5 +138,18 @@ func searchByStatusCode(val string, transactions []ParsedTransaction) []ParsedTr
 		}
 	}
 
+	return result
+}
+
+func searchByAmount(valMin string, valMax string, transactions []ParsedTransaction) []ParsedTransaction {
+	fmt.Println(reflect.TypeOf(valMin))
+	var result []ParsedTransaction
+
+	//	for _, item := range transactions {
+	//		if item.Amount >= valMin && item.Amount <= valMax {
+	//			result = append(result, item)
+
+	//		}
+	//	}
 	return result
 }
