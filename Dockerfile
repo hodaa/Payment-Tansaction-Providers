@@ -1,10 +1,8 @@
 # Dockerfile References: https://docs.docker.com/engine/reference/builder/
 
 # Start from the latest golang base image
-FROM golang:latest
+FROM golang:1.14-alpine
 
-# Add Maintainer Info
-LABEL maintainer="Rajeev Singh <rajeevhub@gmail.com>"
 
 # Set the Current Working Directory inside the container
 WORKDIR /app
@@ -28,7 +26,7 @@ EXPOSE 8080
 CMD ["./main"]
 
 # Run test
-RUN set -ex; \
-    apk update; \
-    apk add --no-cache git
+# RUN set -ex; \
+#     apk update; \
+#     apk add --no-cache git
 
