@@ -9,7 +9,7 @@ To run, from the root of the repo
 Building the image
 
 ```
-docker build -t go-docker .
+docker-compose build
 ```
 
 Running the Docker image
@@ -52,8 +52,6 @@ Get Book by Currency
 ## Inside Image
    - `docker run -it go-docker  sh`
  
-## Postman collection
-   https://www.getpostman.com/collections/19b2f872b7fa75c27c91
 
 ## To Run Test
  ```
