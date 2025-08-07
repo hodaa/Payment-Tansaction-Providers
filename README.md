@@ -1,6 +1,6 @@
 # Payment-Tansaction-golang-api
 
-This is a demo application showing how to build rest api using golang.
+This is an application that demonstrates how to build a REST API using GoLang.
 
 ## Run Locally
 
